@@ -1,0 +1,5 @@
+CREATE DATABASE CRM_InnovacionSA;
+GO
+
+USE CRM_InnovacionSA;
+GO
