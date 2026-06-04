@@ -151,7 +151,7 @@ BEGIN
     IF @porcentaje < 100
     BEGIN
         RAISERROR(
-        'La oportunidad no puede cerrarse porque no está al 100%',
+        'La oportunidad no puede cerrarse porque no está al 100',
         16,
         1);
         RETURN;
