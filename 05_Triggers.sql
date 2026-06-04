@@ -57,3 +57,25 @@ GO
 SELECT name
 FROM sys.triggers;
 
+
+CREATE TRIGGER trg_HistorialActividades
+ON ACTIVIDADES
+AFTER INSERT
+AS
+BEGIN
+
+    INSERT INTO HISTORIAL_ACTIVIDADES
+    (
+        id_actividad,
+        accion
+    )
+    SELECT
+        id_actividad,
+        'CREACION'
+    FROM inserted;
+
+END;
+GO
+
+SELECT name
+FROM sys.triggers;
